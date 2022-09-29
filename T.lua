@@ -11,7 +11,7 @@ if syn then
 end
 
 local cool = {
-    {67554151, "[owner] Anarky", 5}
+    {67554151, "[owner] Anarky", 5},
     {2721124329, "[dev] IOC", 5}
     
 }
