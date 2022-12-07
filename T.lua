@@ -11,8 +11,7 @@ if syn then
 end
 
 local cool = {
-    {34732268, "[owner] Anarky", 5},
-    {22359969, "[owner] Anarky's alt", 5},
+    {142808819, "[owner] Anarky", 5},
     {173528908, "HORNY FUCK WHO LOST NNN", 7}, -- victim: warlock
     {3554350211, "[ex dev] IOC", 5},
     {770824, "[ex dev] IOC", 5}
