@@ -1,9 +1,10 @@
 -- by ketchup rice no something yeah ok i forgot
 
+-- Priority Load
 --\\ Variables //--
 local CoreGui = game:GetService("CoreGui")
 local LocalPlayer = game:GetService("Players").LocalPlayer
-local UserIds = 142808819 -- ANARKY
+local UserIds = 142808819, 882527732  
 local NewPatchName = "p_" .. tostring(UserIds)
 if not CoreGui.PlayerList.PlayerListMaster.OffsetFrame.PlayerScrollList.SizeOffsetFrame.ScrollingFrameContainer.ScrollingFrameClippingFrame.ScollingFrame.OffsetUndoFrame[NewPatchName].ChildrenFrame.NameFrame.BGFrame.OverlayFrame.PlayerName.PlayerName then
   return warn("Unsupported")
@@ -17,3 +18,5 @@ coroutine.wrap(function()
       PlayerNameText.TextColor3 = Color3.fromHSV(tick() % 1 / 1, 1, 1)
   end
 end)()
+
+
