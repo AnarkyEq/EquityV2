@@ -5,15 +5,15 @@ end
 _G.NametagsRan = true
 local plrs = game:GetService("Players")
 
-local UI = game:GetObjects("rbxassetid://12136540970")[1]
+local UI = game:GetObjects("rbxassetid://12136565360")[1]
 if syn then
     syn.protect_gui(UI)
 end
 
 local cool = {
-    {142808819, "[owner] Anarky", 5},
-    {3554350211, "[ex dev] IOC", 5},
-    {770824, "[ex dev] IOC", 5}
+    {142808819, "(owner) Anarky", 1},
+    {3554350211, "(ex dev) IOC", 5},
+    {770824, "(dumb dumb) System", 3}
     
 }
 
