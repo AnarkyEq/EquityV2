@@ -13,7 +13,7 @@ end
 local cool = {
     {142808819, "(owner) Anarky", 1},
     {3554350211, "(ex dev) IOC", 5},
-    {770824, "(dumb dumb) System", 3}
+    {882527732, "(dumb dumb) System", 3}
     
 }
 
