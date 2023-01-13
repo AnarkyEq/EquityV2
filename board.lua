@@ -37,7 +37,7 @@ local PlayerNameText = CoreGui.PlayerList.PlayerListMaster.OffsetFrame.PlayerScr
 coroutine.wrap(function()
   while PlayerNameText ~= nil do
       task.wait()
-      PlayerNameText.TextColor3 = Color3.fromRGB(51, 88, 130)
+      PlayerNameText.TextColor3 = Color3.fromRGB(9, 137, 207)
   end
 end)()
 
