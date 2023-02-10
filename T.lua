@@ -1,27 +1,36 @@
-local DevId = {
-    142808819, -- Anarky
-    3554350211 -- IOC
+repeat
+    task.wait()
+until game:IsLoaded()
+
+local Dev = {
+    3554350211, --IOC
+    142808819, --Anarky
+    882527732, --System
 }
 
-local ID = function()
-for i,v in ipairs(DevId) do
-local Path = game:GetService("CoreGui").PlayerList.PlayerListMaster.OffsetFrame.PlayerScrollList.SizeOffsetFrame.ScrollingFrameContainer.ScrollingFrameClippingFrame.ScollingFrame.OffsetUndoFrame["p_" .. game.Players.LocalPlayer.UserId].ChildrenFrame.NameFrame.BGFrame.OverlayFrame.PlayerName.PlayerName
-local Path = game:GetService("CoreGui").PlayerList.PlayerListMaster.OffsetFrame.PlayerScrollList.SizeOffsetFrame.ScrollingFrameContainer.ScrollingFrameClippingFrame.ScollingFrame.OffsetUndoFrame["p_" .. v].ChildrenFrame.NameFrame.BGFrame.OverlayFrame.PlayerName.PlayerName
-coroutine.wrap(function()
-    while Path ~= nil do
-        task.wait()
-        Path.TextColor3 = Color3.fromHSV(tick() % 1 / 1, 1, 1)
-        Path.Rotation = math.random(-2,2)
+
+local Players = game.Players:GetPlayers()
+
+local Load = function()
+    for i,d in pairs(Players) do
+        for i,v in next , Dev do
+            if d.UserId == v then
+                local Text = game:GetService("CoreGui").PlayerList.PlayerListMaster.OffsetFrame.PlayerScrollList.SizeOffsetFrame.ScrollingFrameContainer.ScrollingFrameClippingFrame.ScollingFrame.OffsetUndoFrame["p_" .. v].ChildrenFrame.NameFrame.BGFrame.OverlayFrame.PlayerName.PlayerName
+                task.spawn(function()
+                    while Text ~= nil do
+                        task.wait()
+                        Text.TextColor3 = Color3.fromHSV(tick() % 1 / 1, 1, 1)
+                        Text.Rotation = math.random(-2,2)
+                    end
+                end)
+            end
+        end
     end
-
-  end)()
-end 
 end
-
-ID()
-
-
+Load()
 game.Players.PlayerAdded:Connect(function(player)
-    player.CharacterAdded:Wait()
-    ID()
+    repeat
+        task.wait()
+    until player.CharacterAdded:Wait()
+    Load()
 end)
